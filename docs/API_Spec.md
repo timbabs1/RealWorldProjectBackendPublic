@@ -40,11 +40,13 @@ Objects applications need to understand.
   "name":"NAME",
   "type":"DOG",
   "desc":"This is a dog.",
+  "status":"Avaliable",
   "location":{
     "postcode":"BLAH"
   },
   "properties":{    
-  }
+  },
+  "shelter":"SHELTERID"
 }
 ```
 
@@ -65,12 +67,13 @@ This will return a list of `Animals` recomended for a the user.
       "name":"NAME",
       "type":"DOG",
       "desc":"This is a dog.",
+      "status":"Avaliable",
       "location":{
         "postcode":"BLAH"
       },
-      "properties":{
-      
-      }
+      "properties":{    
+      },
+      "shelter":"SHELTERID"
     }
   ]
 }
