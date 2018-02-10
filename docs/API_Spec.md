@@ -4,7 +4,7 @@
 
 ### Authentication
 
-This is TBD.
+Not yet decided, but will most likely involve sending the username + password encrypted to a endpoint and then returning a cookie.
 
 ### IDs
 
