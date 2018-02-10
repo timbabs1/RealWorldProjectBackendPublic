@@ -4,6 +4,8 @@
 
 ### Authentication
 
+This is TBD.
+
 ### IDs
 
 IDs are random 16 byte base64 encoded strings.
@@ -24,11 +26,35 @@ They are stored as a JSON object.
 The standard errors are:
 * Unauthorized - You haven't logged in.
 
+## Objects
+
+Objects applications need to understand.
+
+### Animals
+
+#### Example
+
+```json
+{
+  "id":"RANDOMID",
+  "name":"NAME",
+  "type":"DOG",
+  "desc":"This is a dog.",
+  "location":{
+    "postcode":"BLAH"
+  },
+  "properties":{    
+  }
+}
+```
+
+### Shelters
+
 ## Endpoints
 
 ### `GET /recomended`
 
-This will return a list of Animals reconmened for a the user.
+This will return a list of `Animals` recomended for a the user.
 
 #### Example
 ```json
@@ -41,6 +67,9 @@ This will return a list of Animals reconmened for a the user.
       "desc":"This is a dog.",
       "location":{
         "postcode":"BLAH"
+      },
+      "properties":{
+      
       }
     }
   ]
