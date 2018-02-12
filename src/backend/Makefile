@@ -8,4 +8,5 @@ build:
 run:
 	$(GRADLEW) bootRun
 
-
+test:
+	$(GRADLEW) test
