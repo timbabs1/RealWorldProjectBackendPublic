@@ -21,6 +21,14 @@ As the location details we have on an animal can vary, locations can have any of
 
 They are stored as a JSON object.
 
+## Properties
+
+Mainly searchable traits of the animal, e.g the ones listed on the RSPCA website.
+
+## Contact
+
+Object to describe basic shelter information.
+
 ### Errors
 
 The standard errors are:
@@ -44,7 +52,8 @@ Objects applications need to understand.
   "location":{
     "postcode":"BLAH"
   },
-  "properties":{    
+  "properties":{
+    <defined above>
   },
   "shelter":"SHELTERID"
 }
@@ -52,11 +61,25 @@ Objects applications need to understand.
 
 ### Shelters
 
+```json
+{
+  "id":"RANDOMID",
+  "name":"Shelter Name",
+  "contact":{
+    <defined above>
+  }
+  "desc":"Description of Shelter"
+  "animals":[<list of animal ids>]
+}
+```
+
 ## Endpoints
 
-### `GET /recomended`
+### `GET /search`
 
 This will return a list of `Animals` recomended for a the user.
+
+#### Options
 
 #### Example
 ```json
