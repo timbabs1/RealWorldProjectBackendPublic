@@ -53,7 +53,7 @@ Objects applications need to understand.
     "postcode":"BLAH"
   },
   "properties":{
-    <defined above>
+    //<defined above>
   },
   "shelter":"SHELTERID"
 }
@@ -66,24 +66,32 @@ Objects applications need to understand.
   "id":"RANDOMID",
   "name":"Shelter Name",
   "contact":{
-    <defined above>
-  }
+    //<defined above>
+  },
   "desc":"Description of Shelter"
-  "animals":[<list of animal ids>]
+  "animals":[
+    //<list of animal ids>
+  ]
 }
 ```
 
 ## Endpoints
 
-### `GET /search`
+### `GET /animals/search`
 
 This will return a list of `Animals` recomended for a the user.
 
 #### Options
 
+* Location
+* Count
+* 
+
 #### Example
+
 ```json
 {
+  "count": 1,
   "animals":[
     {
       "id":"RANDOMID",
@@ -105,3 +113,15 @@ This will return a list of `Animals` recomended for a the user.
 #### Errors
 
 Nothing beyond the standard errors.
+
+### `POST /shelter/add`
+
+Add a new shelter. Requires an Key with CREATE_SHELTER permissions.
+
+### `POST /animals/add`
+
+Add a new animal. Requires a SHELTER permission.
+
+### `POST /user/fav`
+
+Favorite an animal so the user can track their status / keep aware of it for later.
