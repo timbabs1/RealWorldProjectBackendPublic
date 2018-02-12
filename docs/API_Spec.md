@@ -68,7 +68,7 @@ Objects applications need to understand.
   "contact":{
     //<defined above>
   },
-  "desc":"Description of Shelter"
+  "desc":"Description of Shelter",
   "animals":[
     //<list of animal ids>
   ]
@@ -79,7 +79,7 @@ Objects applications need to understand.
 
 ### `GET /animals/search`
 
-This will return a list of `Animals` recomended for a the user.
+This will return a list of `Animals` for a the user.
 
 #### Options
 
@@ -116,12 +116,32 @@ Nothing beyond the standard errors.
 
 ### `POST /shelter/add`
 
-Add a new shelter. Requires an Key with CREATE_SHELTER permissions.
+Add a new shelter.
+
+#### Permisions
+
+* CREATE_SHELTER
 
 ### `POST /animals/add`
 
-Add a new animal. Requires a SHELTER permission.
+Add a new animal.
+
+#### Permisions
+
+* SHELTER
+
+### `GET /animals/<id>`
+
+Get the details on the animal.
 
 ### `POST /user/fav`
 
 Favorite an animal so the user can track their status / keep aware of it for later.
+
+### `GET /user/recomended`
+
+Get a list of animals recommend by the user.
+
+### `POST /user/auth`
+
+Takes the users login details and returns a token if they are correct.
