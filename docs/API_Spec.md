@@ -38,6 +38,10 @@ The standard errors are:
 
 Objects applications need to understand.
 
+## Permissions
+
+Each key has permisions detailing what resources it can access.
+
 ### Animals
 
 #### Example
