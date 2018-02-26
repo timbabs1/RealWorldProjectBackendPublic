@@ -89,7 +89,7 @@ This will return a list of `Animals` for a the user.
 
 * Location
 * Count
-* 
+* Properties (A list of the ones you are looking for)
 
 #### Example
 
@@ -106,7 +106,7 @@ This will return a list of `Animals` for a the user.
       "location":{
         "postcode":"BLAH"
       },
-      "properties":{    
+      "properties":{
       },
       "shelter":"SHELTERID"
     }
@@ -160,8 +160,17 @@ Takes the users login details and returns a token if they are correct.
 ```
 
 #### Return
+
+Success:
 ```
 {
-  "status":"OK/FAILIRE"
+  "status":"OK"
 }
+```
+Error:
+```
+{
+  "status":"FAILURE",
+  "error":"Unable to Autheticate"
+}  
 ```
