@@ -1,0 +1,7 @@
+<resources>
+    <string name="app_name">AndroidFriendFinder</string>
+    <string name="Age">Age: 12</string>
+    <string name="Name">Mike Striker</string>
+    <string name="Button_Name">More Info</string>
+    <string name="Description">describe</string>
+</resources>
