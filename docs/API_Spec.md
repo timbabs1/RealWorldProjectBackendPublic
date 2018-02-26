@@ -144,8 +144,24 @@ Favorite an animal so the user can track their status / keep aware of it for lat
 
 ### `GET /user/recomended`
 
-Get a list of animals recommend by the user.
+Get a list of `Animal`s recommend by the user.
 
 ### `POST /user/auth`
 
 Takes the users login details and returns a token if they are correct.
+
+#### Input
+
+```
+{
+  "username":"<USERNAME>",
+  "password":"<PASSWORD>"
+}
+```
+
+#### Return
+```
+{
+  "status":"OK/FAILIRE"
+}
+```
