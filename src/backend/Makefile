@@ -6,7 +6,7 @@ build:
 	$(GRADLEW) build
 
 run:
-	$(GRADLEW) bootRun
+	SPRING_CONFIG_NAME=application $(GRADLEW) bootRun
 
 test:
 	$(GRADLEW) test
