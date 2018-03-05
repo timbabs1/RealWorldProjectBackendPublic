@@ -81,7 +81,11 @@ Each key has permisions detailing what resources it can access.
 
 ## Endpoints
 
-### `GET /animals/search`
+### `GET /animals/<ID>`
+
+Return an animal based on it's id.
+
+### `POST /animals/`
 
 This will return a list of `Animals` for a the user.
 
