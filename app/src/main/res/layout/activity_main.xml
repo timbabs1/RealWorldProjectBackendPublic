@@ -7,6 +7,7 @@
     tools:context="com.example.timti.androidfriendfinder.MainActivity">
 
     <TextView
+        android:id="@+id/animalName"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="@string/Name"
@@ -17,7 +18,7 @@
         app:layout_constraintTop_toTopOf="parent" />
 
     <ImageView
-        android:id="@+id/imageView"
+        android:id="@+id/animalImage"
         android:layout_width="286dp"
         android:layout_height="192dp"
         android:layout_marginEnd="8dp"
@@ -27,10 +28,10 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:srcCompat="@drawable/dog_ggg" />
+        />
 
     <TextView
-        android:id="@+id/textView"
+        android:id="@+id/animalAge"
         android:layout_width="67dp"
         android:layout_height="18dp"
         android:layout_marginBottom="196dp"
@@ -43,7 +44,7 @@
         app:layout_constraintStart_toStartOf="parent" />
 
     <Button
-        android:id="@+id/button"
+        android:id="@+id/moreInfo"
         android:layout_width="wrap_content"
         android:layout_height="46dp"
         android:layout_marginBottom="116dp"
@@ -57,33 +58,31 @@
         tools:text="More info" />
 
     <Button
-        android:id="@+id/button2"
+        android:id="@+id/likeButton"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginBottom="44dp"
         android:layout_marginStart="56dp"
         android:background="@android:color/holo_green_light"
-        android:text="@string/Button_Name"
+        android:text="@string/Like_button"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        tools:text="LIKE"
-        android:layout_marginLeft="56dp" />
+        tools:text="LIKE" />
 
     <Button
-        android:id="@+id/button3"
+        android:id="@+id/dislikeButton"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginBottom="44dp"
         android:layout_marginEnd="48dp"
         android:background="@android:color/holo_red_light"
-        android:text="@string/Button_Name"
+        android:text="@string/Dislike_button"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        tools:text="DISLIKE"
-        android:layout_marginRight="48dp" />
+        tools:text="DISLIKE" />
 
     <Button
-        android:id="@+id/button8"
+        android:id="@+id/rightButton"
         android:layout_width="67dp"
         android:layout_height="68dp"
         android:layout_marginBottom="160dp"
@@ -95,7 +94,7 @@
         app:layout_constraintEnd_toEndOf="parent" />
 
     <Button
-        android:id="@+id/button9"
+        android:id="@+id/leftButton"
         android:layout_width="67dp"
         android:layout_height="68dp"
         android:layout_marginBottom="160dp"

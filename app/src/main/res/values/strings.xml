@@ -3,5 +3,7 @@
     <string name="Age">Age: 12</string>
     <string name="Name">Mike Striker</string>
     <string name="Button_Name">More Info</string>
+    <string name="Like_button">Like</string>
+    <string name="Dislike_button">Dislike</string>
     <string name="Description">describe</string>
 </resources>
