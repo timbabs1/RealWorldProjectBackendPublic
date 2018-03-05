@@ -2,8 +2,10 @@
 <project version="4">
   <component name="ProjectModuleManager">
     <modules>
-      <module fileurl="file://$PROJECT_DIR$/AndroidFriendFinder.iml" filepath="$PROJECT_DIR$/AndroidFriendFinder.iml" />
+      <module fileurl="file://D:\GitHub\RealWorldProjectBackend\AndroidFriendFinder.iml" filepath="D:\GitHub\RealWorldProjectBackend\AndroidFriendFinder.iml" />
+      <module fileurl="file://$PROJECT_DIR$/RealWorldProjectBackend.iml" filepath="$PROJECT_DIR$/RealWorldProjectBackend.iml" />
       <module fileurl="file://$PROJECT_DIR$/app/app.iml" filepath="$PROJECT_DIR$/app/app.iml" />
+      <module fileurl="file://D:\GitHub\RealWorldProjectBackend\app\app.iml" filepath="D:\GitHub\RealWorldProjectBackend\app\app.iml" />
     </modules>
   </component>
 </project>
