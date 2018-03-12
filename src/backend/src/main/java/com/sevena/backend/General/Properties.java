@@ -1,13 +1,17 @@
 package com.sevena.backend.general;
 
 public class Properties {
-    private final int id;
+    private final String id;
     
-    public Properties() {
-        this.id = 1;
+    public Properties(String id) {
+        this.id = id;
     }
 
-    public int getId() {
+    public Properties() {
+        this.id = "A";
+    }
+
+    public String getId() {
         return id;
     }
 }

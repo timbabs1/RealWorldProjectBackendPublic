@@ -30,6 +30,18 @@ public class Animal {
         this.shelterId = shelterId;
     }
     
+    // Required due to 
+    public Animal() {
+        this.id = null;
+        this.name = null;
+        this.type = null;
+        this.desc = null;
+        this.status = null;
+        this.location = null;//new Location();
+        this.properties = null;//new Properties();
+        this.shelterId = null;
+    }
+    
     // Damn it Java.... Have to define all the getters....
     public String getId() {
         return id;

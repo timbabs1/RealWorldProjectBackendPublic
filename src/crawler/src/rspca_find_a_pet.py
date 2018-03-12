@@ -54,7 +54,11 @@ class RSPCAFindAPet:
             if searched != None:
                 for item in searched: urls.append(item)
         return urls
+    def examine(self, url):
+        r = requests.get(self._url(url))
+        return r.text
 
 if __name__ == "__main__":
     finder = RSPCAFindAPet()
-    print(finder.search("CV13AQ"))
+    animals = finder.search("CV13AQ")
+    print(finder.examine(animals[0]))
