@@ -5,6 +5,9 @@ GRADLEW=./gradlew
 build:
 	$(GRADLEW) build
 
+docker:
+	$(GRADLEW) build docker
+
 run:
 	SPRING_CONFIG_NAME=application $(GRADLEW) bootRun
 
