@@ -85,7 +85,7 @@ Each key has permisions detailing what resources it can access.
 
 Return an animal based on it's id.
 
-### `POST /animals/`
+### `GET /animals/`
 
 This will return a list of `Animals` for a the user.
 
@@ -122,7 +122,7 @@ This will return a list of `Animals` for a the user.
 
 Nothing beyond the standard errors.
 
-### `POST /shelter/add`
+### `POST /shelter`
 
 Add a new shelter.
 
@@ -130,7 +130,7 @@ Add a new shelter.
 
 * CREATE_SHELTER
 
-### `POST /animals/add`
+### `POST /animals`
 
 Add a new animal.
 
