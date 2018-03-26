@@ -1,6 +1,7 @@
 import requests
 import re
 import json
+import bs4
 
 def lookup_postcode(postcode):
     r = requests.get("https://api.postcodes.io/postcodes/{}".format(postcode))
@@ -56,9 +57,58 @@ class RSPCAFindAPet:
         return urls
     def examine(self, url):
         r = requests.get(self._url(url))
-        return r.text
+        # Extract what we want from the document
+        document = bs4.BeautifulSoup(r.text, "lxml")
+        # Name of animal
+        name = document.title.string.split(' -')[0]
+        # Description of the Animal
+        description = document.find("div", {"class":"petDescription"})\
+            .get_text().strip()
+        # Get what the cats is suitable for
+        try:
+            misc_details = []
+            misc = document.find("div", {"id": "lifeStyle"})
+            misc_details =  map(lambda x: x.get_text(), misc.find("ul")\
+                               .findAll("li"))
+        except:
+            pass
+        # The Animals picture
+        image = document.find("img", {"id": "largeImage"})['src']
+        # Details like age, etc.
+        properties = {}
+        for row in document.find("div", {"class": "aboutMe"}).findAll("tr"):
+            properties[row.find("th").get_text()[:-1].lower()] = \
+                row.find("td").get_text().replace('\n','').replace('\t','')\
+                .replace('\r','')
+        # Shelters Information
+        try:
+            shelter_name = ""
+            shelter_email = ""
+            shelter_hours = ""
+            shelter = document.find('div', {'class': 'establishmentDetails'})
+            shelter_name = shelter.find('a', {'id': 'trackingEstabMoreInfo'})\
+                .get_text()
+            shelter_email = shelter.find('div', {'class':'contact'}).get_text()\
+                .strip()
+            shelter_hours = shelter.find('div',\
+                {'class':'establishmentOpeningHours'}).get_text().strip()
+        except:
+            pass
+        return {
+            'name':name,
+            'description':description,
+            'properties':properties,
+            'misc':misc_details,
+            'image':self._url(image),
+            'shelter':{
+                'name': shelter_name,
+                'email':shelter_email,
+                'hours':shelter_hours
+            }
+        }
 
 if __name__ == "__main__":
     finder = RSPCAFindAPet()
     animals = finder.search("CV13AQ")
-    print(finder.examine(animals[0]))
+    for i in animals:
+        print(finder.examine(i))
