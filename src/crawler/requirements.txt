@@ -180,7 +180,7 @@ python-socketio==1.8.3
 pytools==2017.3
 pytz==2017.2
 pyxdg==0.25
-PyYAML==3.12
+PyYAML==5.4
 qrcode==5.3
 r2pipe==0.9.1
 rainbow==0.8.6
