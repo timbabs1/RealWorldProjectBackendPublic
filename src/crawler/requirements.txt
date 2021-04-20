@@ -144,7 +144,7 @@ protobuf==3.3.0
 psutil==5.4.2
 ptyprocess==0.5.2
 pwntools==3.6.1
-py==1.5.2
+py==1.10.0
 py65==1.0.0
 pyaes==1.6.0
 pyasn1==0.3.7
