@@ -174,7 +174,7 @@ python-apt==1.4.0b3
 python-dateutil==1.5
 python-distutils-extra==2.39
 python-engineio==2.0.1
-python-ldap==2.5.2
+python-ldap==3.4.0
 python-openid==2.2.5
 python-socketio==1.8.3
 pytools==2017.3
