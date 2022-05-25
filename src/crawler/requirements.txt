@@ -157,7 +157,7 @@ pycurl==7.43.0
 pyelftools==0.24
 Pygments==2.2.0
 pygobject==3.24.1
-PyJWT==1.5.3
+PyJWT==2.4.0
 pyminifier==2.1
 pymongo==3.5.1
 PyNaCl==1.2.1
