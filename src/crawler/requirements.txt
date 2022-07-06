@@ -85,7 +85,7 @@ keyrings.alt==2.2
 keystone-engine==0.9.1.post3
 logconfig==0.4.0
 logutils==0.3.5
-lxml==4.0.0
+lxml==4.9.1
 lzw==0.1.11
 Mako==1.0.7
 manifestparser==1.1
